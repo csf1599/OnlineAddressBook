@@ -4,12 +4,24 @@
 
 using namespace std;
 
-addressType::addressType() {
-    address = "";
-    city = "";
-    state = "XX";
-    zipcode = 10000;
+addressType::addressType(string add, string cit, string st, int zip) {
+    address = add;
+    city = cit;
+    state = st;
+    zipcode = zip;
 }
+//addressType::addressType(string add, string cit, string st, int zip) {
+//    address = add;
+//    city = cit;
+//    state = st;
+//    zipcode = zip;
+//}
+//void addressType::setFull(string add, string cit, string st, int zip) {
+//    address = add;
+//    city = cit;
+//    state = st;
+//    zipcode = zip;
+//}
 void addressType::setAddress(string addy) {
     address = addy;
 }
@@ -22,6 +34,7 @@ void addressType::setState(string st) {
     }
     else {
         cout << "There was an error with state abbreviation, assinging default value (XX)." << endl;
+        state = "XX";
     }
 }
 void addressType::setZipcode(int zip) {
@@ -30,6 +43,7 @@ void addressType::setZipcode(int zip) {
     }
     else {
         cout << "There was an error with the zipcode, assigning default value (10000)." << endl;
+        zipcode = 10000;
     }
 }
 string addressType::getAddress() {
@@ -46,5 +60,5 @@ int addressType::getZipcode() {
 }
 void addressType::print() {
     cout << address << endl;
-    cout << city << ", " << state << " " << zipcode << endl;
+    cout << city << " " << state << ", " << zipcode << endl;
 }

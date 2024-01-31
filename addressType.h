@@ -17,7 +17,8 @@ public:
     string getState();
     int getZipcode();
     void print();
-    addressType();
+    //addressType();
+    addressType(string = " ", string = " ", string = "XX", int = 10000);
 private:
     string address;
     string city;
