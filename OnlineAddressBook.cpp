@@ -1,6 +1,7 @@
 // Address Book Project by Caleb Frazier
 
 #include <iostream>
+#include <string>
 #include "addressType.h"
 
 using namespace std;
@@ -28,5 +29,5 @@ void addressTypeTest() {
 }
 int main()
 {
-	addressTypeTest();
+	//addressTypeTest();
 }

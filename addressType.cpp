@@ -4,25 +4,18 @@
 #include "addressType.h"
 
 using namespace std;
-
+addressType::addressType() {
+    address = "";
+    city = "";
+    state = "XX";
+    zipcode = 10000;
+}
 addressType::addressType(string add, string cit, string st, int zip) {
     address = add;
     city = cit;
     state = st;
     zipcode = zip;
 }
-//addressType::addressType(string add, string cit, string st, int zip) {
-//    address = add;
-//    city = cit;
-//    state = st;
-//    zipcode = zip;
-//}
-//void addressType::setFull(string add, string cit, string st, int zip) {
-//    address = add;
-//    city = cit;
-//    state = st;
-//    zipcode = zip;
-//}
 void addressType::setAddress(string addy) {
     address = addy;
 }
