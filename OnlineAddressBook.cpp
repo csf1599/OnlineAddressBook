@@ -4,9 +4,7 @@
 #include "addressType.h"
 
 using namespace std;
-
-int main()
-{
+void addressTypeTest() {
 	cout << "Testing Default constructor.\n";
 	addressType defAddress;
 	defAddress.print();
@@ -27,4 +25,8 @@ int main()
 	address.setZipcode(23669);
 	address.print();
 	cout << endl;
+}
+int main()
+{
+	addressTypeTest();
 }
