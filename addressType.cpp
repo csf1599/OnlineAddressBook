@@ -4,12 +4,6 @@
 #include "addressType.h"
 
 using namespace std;
-addressType::addressType() {
-    address = "";
-    city = "";
-    state = "XX";
-    zipcode = 10000;
-}
 addressType::addressType(string add, string cit, string st, int zip) {
     address = add;
     city = cit;

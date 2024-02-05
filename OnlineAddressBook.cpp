@@ -29,5 +29,5 @@ void addressTypeTest() {
 }
 int main()
 {
-	//addressTypeTest();
+	addressTypeTest();
 }

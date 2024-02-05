@@ -17,8 +17,7 @@ public:
     string getState(); // preconditions : default or user set value, postconditions : none 
     int getZipcode(); // preconditions : default or user set value, postconditions : none
     void print(); // preconditions : default or user set values for all variables, postconditions : console prints all values in correct format
-    addressType(string, string, string, int); // overload constructor
-    addressType(); // default constructor
+    addressType(string = " ", string = " ", string = "XX", int = 10000); // overload and default constructor
 private:
     string address;
     string city;
