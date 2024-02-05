@@ -18,30 +18,70 @@ int dateType::getYear(){
   return dYear;
 }
 void dateType::setDate(int month, int day, int year){
-  dMonth = month;
-  dDay = day;
-  dYear = year;
+    if (dateType::isLeapYear(year) && (year >= 1900 || year <= 2024)) {
+        switch (month) {
+        case 1:
+            if (day <= 31) {
+                dMonth = month;
+                dDay = day;
+                dYear = year;
+            }
+            else {
+                break;
+            }
+            break;
+        case 2:
+            if (day <= 29) {
+                dMonth = month;
+                dDay = day;
+                dYear = year;
+            }
+            else {
+                break;
+            }
+            break;
+
+        case 3:
+            if (day <= 31) {
+                dMonth = month;
+                dDay = day;
+                dYear = year;
+            }
+            else {
+                break;
+            }
+            break;
+        case 4:
+            if (day <= 30) {
+                dMonth = month;
+                dDay = day;
+                dYear = year;
+            }
+            else {
+                break;
+            }
+            break;
+        case 5:
+            if (day <= 31) {
+                dMonth = month;
+                dDay = day;
+                dYear = year;
+            }
+            else {
+                break;
+            }
+            break;
+        }
+    }
 }
 void dateType::print(){
   cout << dMonth << "-" << dDay << "-" << dYear << endl;
 }
-//bool dateType::validate(int month, int day, int year){
-//  if(month>=12 && month<=1){
-//    return false;
-//    cout << "Month out of range" << endl;
-//  }
-//  else if(year>=1900 && year <=2023){
-//    return false;
-//    cout << "Year out of range" << endl;
-//  }
-//  else if(){
-//
-//  }
-//}
- bool dateType::isLeapYear(int year){
-  if(year%4==0||year%1000==2){
-   }
-   else{
-     return false;
+bool dateType::isLeapYear(int year){
+  if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+       return true;
   }
- }
+  else {
+       return false;
+  }
+}

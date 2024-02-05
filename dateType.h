@@ -10,7 +10,6 @@ public:
     int getMonth();
     int getYear();
     void print();
-    //bool validate(int, int, int);
     bool isLeapYear(int);
     dateType();
 private:

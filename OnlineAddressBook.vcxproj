@@ -127,12 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="addressType.cpp" />
     <ClCompile Include="dateType.cpp" />
     <ClCompile Include="OnlineAddressBook.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="addressType.h" />
     <ClInclude Include="dateType.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
