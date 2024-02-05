@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
 	dateType dateTest;
-	dateTest.setDate(2,29,2000);
+	dateTest.setDate(2,29,1997);
 	dateTest.print();
 
 }
