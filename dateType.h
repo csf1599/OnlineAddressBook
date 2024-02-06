@@ -11,7 +11,7 @@ public:
     int getYear();
     void print();
     bool isLeapYear(int);
-    dateType();
+    dateType(int month = 1, int day = 1, int year = 1900);
 private:
     int dMonth;
     int dDay;

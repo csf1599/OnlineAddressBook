@@ -3,10 +3,10 @@
 
 using namespace std;
 
-dateType::dateType(){
-  dMonth = 1;
-  dDay = 1;
-  dYear = 1900;
+dateType::dateType(int month, int day, int year){
+  dMonth = month;
+  dDay = day;
+  dYear = year;
 }
 int dateType::getDay(){
   return dDay;
@@ -19,13 +19,16 @@ int dateType::getYear(){
 }
 void dateType::setDate(int month, int day, int year){
     // conditional that states in english :: if it is a leap year and the year is in bounds, and the days fit into the months selected
-    // set month, day and year.
+    // and the month is within the bounds -> set month, day and year.
     // if any of this is untrue inform user and set to defaul (break)
-    // same conditional used with the only difference being that the year is not a leap year, and changes february days alowed in month
-    if (dateType::isLeapYear(year) && (year >= 1900 && year <= 2024)) {
+    // same conditional used with the only difference being that the year is not a leap year, and changes days allowed in february
+    if (dateType::isLeapYear(year) && (year >= 1900 && year <= 2024) && (month >= 1 && month <= 12)) {
         switch (month) {
         case 0:
             cout << "Invalid date, resetting to default date.\n";
+            dMonth = 1;
+            dDay = 1;
+            dYear = 1900;
             break;
         case 1:
             if (day <= 31) {
@@ -35,6 +38,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -46,6 +52,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -58,6 +67,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -69,6 +81,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -80,6 +95,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -91,6 +109,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -102,6 +123,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -113,6 +137,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -124,6 +151,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -135,6 +165,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -146,6 +179,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -157,16 +193,20 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
+            cout << "Invalid date, resetting to default date.\n";
+            dMonth = 1;
+            dDay = 1;
+            dYear = 1900;
             break;
         }
     }
-    else if (!dateType::isLeapYear(year) && (year >= 1900 && year <= 2024)) {
+    else if (!dateType::isLeapYear(year) && (year >= 1900 && year <= 2024) && (month >=1&& month <=12) ) {
         switch (month) {
-        case 0:
-            cout << "Invalid date, resetting to default date.\n";
-            break;
         case 1:
             if (day <= 31) {
                 dMonth = month;
@@ -175,6 +215,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -186,6 +229,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -198,6 +244,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -209,6 +258,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -220,6 +272,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -231,6 +286,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -242,6 +300,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -253,6 +314,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -264,6 +328,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -275,6 +342,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -286,6 +356,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -297,6 +370,9 @@ void dateType::setDate(int month, int day, int year){
             }
             else {
                 cout << "Invalid date, resetting to default date.\n";
+                dMonth = 1;
+                dDay = 1;
+                dYear = 1900;
                 break;
             }
             break;
@@ -304,6 +380,9 @@ void dateType::setDate(int month, int day, int year){
     }
     else {
         cout << "Invalid date, resetting to default date.\n";
+        dMonth = 1;
+        dDay = 1;
+        dYear = 1900;
     }
 }
 void dateType::print(){
