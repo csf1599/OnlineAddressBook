@@ -20,3 +20,6 @@ void personType::setLastName(string last) {
 string personType::getLastName() {
 	return last_name;
 }
+void personType::print() {
+	cout << first_name << "," << last_name;
+}

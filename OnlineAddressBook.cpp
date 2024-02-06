@@ -2,12 +2,13 @@
 
 #include <iostream>
 #include <string>
-#include "personType.h"
+#include "extPersonType.h"
+
 
 using namespace std;
 
 int main()
 {
-	personType test("James", "Evil");
-	cout << test.getLastName();
+	extPersonType person("George", "Smith", 4, 30, 1994, "145 South Street, Apt.5", "Hampton", "VA", 23554, "757 - 444 - 5555", "Friend");
+	person.print();
 }

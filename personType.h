@@ -9,6 +9,7 @@ public:
     string getFirstName();
     void setLastName(string);
     string getLastName();
+    void print();
     personType(string = "", string = "");
 private:
     string first_name;
