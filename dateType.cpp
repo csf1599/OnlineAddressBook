@@ -9,15 +9,24 @@ dateType::dateType(int month, int day, int year){
   dYear = year;
 }
 int dateType::getDay(){
+//preconditions : none
+//postconditions : returns the value of day for an object
   return dDay;
 }
 int dateType::getMonth(){
+//preconditions : none
+//postconditions : returns the value of month for an object
   return dMonth;
 }
 int dateType::getYear(){
+//preconditions : none
+//postconditions : returns the value of year for an object
   return dYear;
 }
 void dateType::setDate(int month, int day, int year){
+    //precondtions : users provide 3 int to represent month, day, and year
+    //postconditions : date is set to users 3 ints, or the default ints for date
+
     // conditional that states in english :: if it is a leap year and the year is in bounds, and the days fit into the months selected
     // and the month is within the bounds -> set month, day and year.
     // if any of this is untrue inform user and set to defaul (break)
@@ -386,9 +395,15 @@ void dateType::setDate(int month, int day, int year){
     }
 }
 void dateType::print(){
+//preconditions : none
+//postconditions : the date is printed in standard format
+
   cout << dMonth << "-" << dDay << "-" << dYear << endl;
 }
 bool dateType::isLeapYear(int year){
+// proconditions : users provide int for year
+// postconditions : true is returned if it is a leap year, if it isn't false is returned
+
   if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
        return true;
   }
