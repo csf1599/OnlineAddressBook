@@ -2,11 +2,12 @@
 
 #include <iostream>
 #include <string>
-
+#include "personType.h"
 
 using namespace std;
 
 int main()
 {
-	cout << "this is the ext person branch";
+	personType test("James", "Evil");
+	cout << test.getLastName();
 }
