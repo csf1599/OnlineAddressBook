@@ -9,13 +9,13 @@
 using namespace std;
 class extPersonType : public personType{
 public:
-	string relationCheck(string);
-	void setPhoneNumber(string);
-	void setRelationship(string);
-	string getPhoneNumber();
-	string getRelationship();
-	int getBirthMonth();
-	void print();
+	string relationCheck(string); // preconditions : users relationship input , postconditions : returns users input or "None"
+	void setPhoneNumber(string); // preconditions : none , postconditions : sets phoneNumber
+	void setRelationship(string); // preconditions : none , postconditions : sets relationship
+	string getPhoneNumber(); // preconditions : none , postconditions : returns phoneNumber
+	string getRelationship(); // preconditions : none , postconditions : returns relationship
+	int getBirthMonth(); // preconditions : none , postconditions : returns month of birthDate
+	void print(); // preconditions : none , postconditions : outputs entire extPersonType to console in the specified format
 	extPersonType(string = "", string = "", int = 1, int = 1, int = 1900,
 		string = "", string = "", string = "XX", int = 10000, string = "None", string = "None");
 private:
