@@ -8,8 +8,8 @@ using namespace std;
 
 class addressBookType {
 public :
-	void initEntry(string);
-	void addEntry(extPersonType);
+	void initEntry(string); // opens file and reads lines into variables that get turned into extPersonType obj
+	void addEntry(extPersonType); // adds an extPersonType obj into array addressList
 	void findPerson(string);
 	void findBirthdays(int);
 	void findRelations(string);

@@ -5,8 +5,10 @@
 #include "addressBookType.h"
 
 
+
 using namespace std;
 int main()
 {
-	
+	addressBookType test;
+	test.initEntry("AddressBookData.txt");
 }
