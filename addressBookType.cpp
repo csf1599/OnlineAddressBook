@@ -20,13 +20,32 @@ void addressBookType::initEntry(string filename) {
 		getline(inFile, add);
 		getline(inFile, cty);
 		inFile >> st >> zip >> p_num >> rel;
-		addEntry(extPersonType(f_name, l_name, mon, day, yr, add, cty, st, zip, p_num, rel));
 		count++;
-		cout << count << "\n";
+		max_length = count;
+		length = max_length - 1;
+		addEntry(extPersonType(f_name, l_name, mon, day, yr, add, cty, st, zip, p_num, rel));
 	}
 
 }
 void addressBookType::addEntry(extPersonType entry){
-	entry.print();
-	cout << "\n";
+	if (length < max_length) {
+		addressList[length] = entry;
+		length++;
+	}
+	else {
+		cout << "Address Book is full!" << endl;
+	}
+}
+void addressBookType::print() {
+	for (int i = 0; i <length; i++) {
+		addressList[i].print();
+		cout << endl;
+	}
+}
+void addressBookType::findPerson(string lastNA) {
+	for (int i = 0; i < length; i++) {
+		if (addressList[i].getLastName() == lastNA) {
+			addressList[i].print();
+		}
+	}
 }

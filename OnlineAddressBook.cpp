@@ -11,4 +11,5 @@ int main()
 {
 	addressBookType test;
 	test.initEntry("AddressBookData.txt");
+	test.findPerson("Goofy");
 }
