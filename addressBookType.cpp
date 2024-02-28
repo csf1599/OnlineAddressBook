@@ -24,6 +24,7 @@ void addressBookType::initEntry(string filename) {
 		max_length = count;
 		length = max_length - 1;
 		addEntry(extPersonType(f_name, l_name, mon, day, yr, add, cty, st, zip, p_num, rel));
+
 	}
 
 }
@@ -36,6 +37,25 @@ void addressBookType::addEntry(extPersonType entry){
 		cout << "Address Book is full!" << endl;
 	}
 }
+void addressBookType::sortEntries() {
+	int current = 1;
+	while (current < length) {
+		int index = current;
+		bool placeFound = false;
+		while (index > 0 && !placeFound) {
+			if (index < index - 1) {
+				extPersonType temp = addressList[index];
+				addressList[index] = addressList[index - 1];
+				addressList[index - 1] = temp;
+				index = index - 1;
+			}
+			else {
+				placeFound = true;
+			}
+		}
+	}
+	current = current++;
+}
 void addressBookType::print() {
 	for (int i = 0; i <length; i++) {
 		addressList[i].print();
@@ -45,6 +65,21 @@ void addressBookType::print() {
 void addressBookType::findPerson(string lastNA) {
 	for (int i = 0; i < length; i++) {
 		if (addressList[i].getLastName() == lastNA) {
+			addressList[i].print();
+		}
+	}
+
+}
+void addressBookType::findBirthdays(int b_month) {
+	for (int i = 0; i < length; i++) {
+		if (addressList[i].getBirthMonth() == b_month) {
+			addressList[i].print();
+		}
+	}
+}
+void addressBookType::findRelations(string relation) {
+	for (int i = 0; i < length; i++) {
+		if (addressList[i].getRelationship() == relation) {
 			addressList[i].print();
 		}
 	}
