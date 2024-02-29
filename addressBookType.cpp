@@ -29,13 +29,14 @@ void addressBookType::initEntry(string filename) {
 
 }
 void addressBookType::addEntry(extPersonType entry){
-	if (length < max_length) {
+	if (length < max_length+1) {
 		addressList[length] = entry;
 		length++;
 	}
 	else {
 		cout << "Address Book is full!" << endl;
 	}
+	sortEntries();
 }
 void addressBookType::sortEntries() {
 	int current = 1;
