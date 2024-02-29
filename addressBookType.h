@@ -17,7 +17,7 @@ public :
 	void sortEntries();
 private :
 	extPersonType addressList[500];
-	int length;
+	int length = 0;
 	int max_length;
 };
 #endif

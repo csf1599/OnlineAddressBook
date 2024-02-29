@@ -11,6 +11,5 @@ int main()
 {
 	addressBookType test;
 	test.initEntry("AddressBookData.txt");
-	//test.sortEntries();
 	test.print();
 }

@@ -24,8 +24,8 @@ void addressBookType::initEntry(string filename) {
 		max_length = count;
 		length = max_length - 1;
 		addEntry(extPersonType(f_name, l_name, mon, day, yr, add, cty, st, zip, p_num, rel));
-
 	}
+	sortEntries();
 
 }
 void addressBookType::addEntry(extPersonType entry){
@@ -43,7 +43,7 @@ void addressBookType::sortEntries() {
 		int index = current;
 		bool placeFound = false;
 		while (index > 0 && !placeFound) {
-			if (index < index - 1) {
+			if (addressList[index].getLastName() < addressList[index - 1].getLastName()) {
 				extPersonType temp = addressList[index];
 				addressList[index] = addressList[index - 1];
 				addressList[index - 1] = temp;
@@ -53,8 +53,9 @@ void addressBookType::sortEntries() {
 				placeFound = true;
 			}
 		}
+		current = current++;
+		
 	}
-	current = current++;
 }
 void addressBookType::print() {
 	for (int i = 0; i <length; i++) {
