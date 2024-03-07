@@ -9,7 +9,9 @@ extPersonType::extPersonType(string first, string last, int bMonth, int bDay, in
 	:personType (first,last), birthDate(bMonth, bDay, bYear) , address(address, city, state, zipcode) {
 	phoneNumber = phoneNum;
 	relationship = relationCheck(relation);
+	nameKey = first + " " + last;
 }
+
 void extPersonType::setPhoneNumber(string pNum) {
 	phoneNumber = pNum;
 }
@@ -39,4 +41,13 @@ string extPersonType::relationCheck(string relation) {
 	else {
 		return "None";
 	}
+}
+bool extPersonType::operator==(const extPersonType& theirs)const {
+	return(this->nameKey == theirs.nameKey);
+}
+bool extPersonType::operator!=(const extPersonType& theirs)const {
+	return!(*this == theirs.nameKey);
+}
+bool extPersonType::operator>=(const extPersonType& theirs)const {
+	return(this->nameKey >= theirs.nameKey);
 }

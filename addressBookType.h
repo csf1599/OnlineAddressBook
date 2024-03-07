@@ -1,12 +1,13 @@
 #ifndef ADBT
 #define ADBT
 #include "extPersonType.h"
+#include "orderedLinkedList.h"
 #include <string>
 #include <iostream>
 
 using namespace std;
 
-class addressBookType {
+class addressBookType: orderedLinkedList<extPersonType> {
 public :
 	void initEntry(string); // opens file and reads lines into variables that get turned into extPersonType obj
 	void addEntry(extPersonType); // adds an extPersonType obj into array addressList
@@ -14,10 +15,7 @@ public :
 	void findBirthdays(int);
 	void findRelations(string);
 	void print();
-	void sortEntries();
-private :
-	extPersonType addressList[500];
-	int length = 0;
-	int max_length;
+private:
+	orderedLinkedList addList;
 };
 #endif

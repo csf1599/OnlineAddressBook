@@ -58,5 +58,13 @@ void client() {
 }
 int main()
 {
-	client();
+	//client();
+	/*addressBookType test;
+	test.initEntry("AddressBookData.txt");
+	test.print();*/
+	addressBookType test;
+	test.initEntry("AddressBookData.txt");
+	test.print();
+	
+
 }

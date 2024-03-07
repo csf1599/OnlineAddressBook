@@ -20,69 +20,38 @@ void addressBookType::initEntry(string filename) {
 		getline(inFile, add);
 		getline(inFile, cty);
 		inFile >> st >> zip >> p_num >> rel;
+		extPersonType entry = extPersonType(f_name, l_name, mon, day, yr, add, cty, st, zip,  p_num, rel);
+		addEntry(entry);
 		count++;
-		max_length = count;
-		length = max_length - 1;
-		addEntry(extPersonType(f_name, l_name, mon, day, yr, add, cty, st, zip, p_num, rel));
 	}
-	sortEntries();
 
 }
 void addressBookType::addEntry(extPersonType entry){
-	if (length < max_length+1) {
-		addressList[length] = entry;
-		length++;
-	}
-	else {
-		cout << "Address Book is full!" << endl;
-	}
-	sortEntries();
+	addList.insert(entry);
 }
-void addressBookType::sortEntries() {
-	int current = 1;
-	while (current < length) {
-		int index = current;
-		bool placeFound = false;
-		while (index > 0 && !placeFound) {
-			if (addressList[index].getLastName() < addressList[index - 1].getLastName()) {
-				extPersonType temp = addressList[index];
-				addressList[index] = addressList[index - 1];
-				addressList[index - 1] = temp;
-				index = index - 1;
-			}
-			else {
-				placeFound = true;
-			}
-		}
-		current = current++;
-		
-	}
-}
+
 void addressBookType::print() {
-	for (int i = 0; i <length; i++) {
-		addressList[i].print();
-		cout << endl;
-	}
+	cout << addList.get;
 }
 void addressBookType::findPerson(string lastNA) {
-	for (int i = 0; i < length; i++) {
+	/*for (int i = 0; i < length; i++) {
 		if (addressList[i].getLastName() == lastNA) {
 			addressList[i].print();
 		}
-	}
+	}*/
 
 }
 void addressBookType::findBirthdays(int b_month) {
-	for (int i = 0; i < length; i++) {
+	/*for (int i = 0; i < length; i++) {
 		if (addressList[i].getBirthMonth() == b_month) {
 			addressList[i].print();
 		}
-	}
+	}*/
 }
 void addressBookType::findRelations(string relation) {
-	for (int i = 0; i < length; i++) {
-		if (addressList[i].getRelationship() == relation) {
-			addressList[i].print();
-		}
-	}
+	//for (int i = 0; i < length; i++) {
+	//	if (addressList[i].getRelationship() == relation) {
+	//		addressList[i].print();
+	//	}
+	//}
 }
