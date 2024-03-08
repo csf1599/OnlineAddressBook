@@ -31,7 +31,7 @@ void addressBookType::addEntry(extPersonType entry){
 }
 
 void addressBookType::print() {
-	cout << addList.get;
+	addList.print();
 }
 void addressBookType::findPerson(string lastNA) {
 	/*for (int i = 0; i < length; i++) {

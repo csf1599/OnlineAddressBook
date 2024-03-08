@@ -5,6 +5,7 @@
 #include "personType.h"
 #include "addressType.h"
 #include "dateType.h"
+#include "orderedLinkedList.h"
 
 using namespace std;
 class extPersonType : public personType{

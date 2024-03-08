@@ -3,10 +3,10 @@
 
 using namespace std;
 
-dateType::dateType(){
-  dMonth = 1;
-  dDay = 1;
-  dYear = 1900;
+dateType::dateType(int month, int day, int year){
+  dMonth = month;
+  dDay = day;
+  dYear = year;
 }
 int dateType::getDay(){
   return dDay;

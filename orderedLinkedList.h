@@ -2,6 +2,8 @@
 #define H_orderedListType
  
 #include "linkedList.h"
+#include <string>
+#include <iostream>
  
 using namespace std; 
  
