@@ -16,7 +16,7 @@ public:
 	string getPhoneNumber(); // preconditions : none , postconditions : returns phoneNumber
 	string getRelationship(); // preconditions : none , postconditions : returns relationship
 	int getBirthMonth(); // preconditions : none , postconditions : returns month of birthDate
-	void print(); // preconditions : none , postconditions : outputs entire extPersonType to console in the specified format
+	void ext_print(); // preconditions : none , postconditions : outputs entire extPersonType to console in the specified format
 	extPersonType(string = "", string = "", int = 1, int = 1, int = 1900,
 		string = "", string = "", string = "XX", int = 10000, string = "None", string = "None");
 	bool operator==(const extPersonType&)const;

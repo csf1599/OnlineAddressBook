@@ -27,11 +27,20 @@ void addressBookType::initEntry(string filename) {
 
 }
 void addressBookType::addEntry(extPersonType entry){
-	addList.insert(entry);
+	nodeType<extPersonType>* newNode = new nodeType<extPersonType>;
+	newNode->info = entry;
+	newNode->link = nullptr;
+	this->insert(newNode->info);
 }
 
 void addressBookType::print() {
-	addList.print();
+	nodeType <extPersonType> *current;
+	current = first;
+	while (current != NULL) {
+		current->info.ext_print();
+		current = current->link;
+	}
+	
 }
 void addressBookType::findPerson(string lastNA) {
 	/*for (int i = 0; i < length; i++) {

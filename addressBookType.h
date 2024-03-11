@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class addressBookType: orderedLinkedList<extPersonType> {
+class addressBookType: public orderedLinkedList<extPersonType> {
 public :
 	void initEntry(string); // opens file and reads lines into variables that get turned into extPersonType obj
 	void addEntry(extPersonType); // adds an extPersonType obj into array addressList
@@ -16,6 +16,6 @@ public :
 	void findRelations(string);
 	void print();
 private:
-	orderedLinkedList addList;
+	orderedLinkedList<extPersonType> addList;
 };
 #endif

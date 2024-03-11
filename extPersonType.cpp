@@ -27,7 +27,7 @@ string extPersonType::getRelationship() {
 int extPersonType::getBirthMonth() {
 	return birthDate.getMonth();
 }
-void extPersonType::print() {
+void extPersonType::ext_print() {
 	personType::print();
 	cout << "\n";
 	birthDate.print();
