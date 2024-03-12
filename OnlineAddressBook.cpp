@@ -64,7 +64,7 @@ int main()
 	test.print();*/
 	addressBookType test;
 	test.initEntry("AddressBookData.txt");
-	test.print();
+	test.findRelations("Friend");
 	
 
 }

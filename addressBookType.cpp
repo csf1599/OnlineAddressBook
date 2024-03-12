@@ -43,24 +43,42 @@ void addressBookType::print() {
 	
 }
 void addressBookType::findPerson(string lastNA) {
-	/*for (int i = 0; i < length; i++) {
-		if (addressList[i].getLastName() == lastNA) {
-			addressList[i].print();
+	nodeType <extPersonType>* current;
+	current = first;
+	while (current != NULL) {
+		if (current->info.getLastName() == lastNA) {
+			current->info.ext_print();
+			current = current->link;
 		}
-	}*/
+		else {
+			current = current->link;
+		}
+	}
 
 }
 void addressBookType::findBirthdays(int b_month) {
-	/*for (int i = 0; i < length; i++) {
-		if (addressList[i].getBirthMonth() == b_month) {
-			addressList[i].print();
+	nodeType <extPersonType>* current;
+	current = first;
+	while (current != NULL) {
+		if (current->info.getBirthMonth() == b_month) {
+			current->info.ext_print();
+			current = current->link;
 		}
-	}*/
+		else {
+			current = current->link;
+		}
+	}
 }
 void addressBookType::findRelations(string relation) {
-	//for (int i = 0; i < length; i++) {
-	//	if (addressList[i].getRelationship() == relation) {
-	//		addressList[i].print();
-	//	}
-	//}
+	nodeType <extPersonType>* current;
+	current = first;
+	while (current != NULL) {
+		if (current->info.getRelationship() == relation) {
+			current->info.ext_print();
+			current = current->link;
+		}
+		else {
+			current = current->link;
+		}
+	}
 }
