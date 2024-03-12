@@ -82,3 +82,19 @@ void addressBookType::findRelations(string relation) {
 		}
 	}
 }
+void addressBookType::deleteEntry(string uPerson) {
+	nodeType <extPersonType>* current;
+	current = first;
+	while (current != NULL) {
+		if (current->info.getFirstName() + " " + current->info.getLastName() == uPerson) {
+			deleteNode(current->info);
+			break;
+		}
+		else {
+			current = current->link;
+		}
+	}
+}
+void addressBookType::userAdd(string uPerson) {
+
+}

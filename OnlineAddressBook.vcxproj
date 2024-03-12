@@ -144,6 +144,9 @@
     <ClInclude Include="personType.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="AddressBookData.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

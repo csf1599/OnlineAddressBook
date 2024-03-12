@@ -64,7 +64,9 @@ int main()
 	test.print();*/
 	addressBookType test;
 	test.initEntry("AddressBookData.txt");
-	test.findRelations("Friend");
-	
+	test.print();
+	test.deleteEntry("Chelsea Tomak");
+	cout << endl;
+	test.print();
 
 }
