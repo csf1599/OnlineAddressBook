@@ -68,5 +68,8 @@ int main()
 	test.deleteEntry("Chelsea Tomak");
 	cout << endl;
 	test.print();
+	cout << endl;
+	test.userAdd(extPersonType("Caleb", "Frazier", 12, 31, 2001, "204 Walden Drive", "Yorktown", "VA", 23692, "(803)468-5002", "Friend"));
+	test.print();
 
 }

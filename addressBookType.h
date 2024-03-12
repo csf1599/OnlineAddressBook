@@ -15,7 +15,7 @@ public :
 	void findBirthdays(int);
 	void findRelations(string);
 	void deleteEntry(string);
-	void userAdd(string);
+	void userAdd(extPersonType);
 	void print();
 private:
 	orderedLinkedList<extPersonType> addList;

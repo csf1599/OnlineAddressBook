@@ -95,6 +95,6 @@ void addressBookType::deleteEntry(string uPerson) {
 		}
 	}
 }
-void addressBookType::userAdd(string uPerson) {
-
+void addressBookType::userAdd(extPersonType uPerson) {
+	addEntry(uPerson);
 }
