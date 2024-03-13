@@ -8,7 +8,7 @@
 #include "orderedLinkedList.h"
 
 using namespace std;
-class extPersonType : public personType{
+class extPersonType : public personType, public dateType, public addressType{
 public:
 	string relationCheck(string); // preconditions : users relationship input , postconditions : returns users input or "None"
 	void setPhoneNumber(string); // preconditions : none , postconditions : sets phoneNumber
