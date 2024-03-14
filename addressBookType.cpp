@@ -98,24 +98,20 @@ void addressBookType::deleteEntry(string uPerson) {
 void addressBookType::userAdd(extPersonType uPerson) {
 	addEntry(uPerson);
 }
-void addressBookType::reInit(string oSFile) {
-	nodeType <extPersonType>* current;
-	current = first;
-	ofstream oFile;
-	oFile.open(oSFile);
-	while (current != NULL) {
-		oFile << current->info.getFirstName();
-		oFile << current->info.getLastName();
-		oFile << current->info.getMonth();
-		oFile << current->info.getDay();
-		oFile << current->info.getYear();
-		oFile << current->info.getAddress();
-		oFile << current->info.getCity();
-		oFile << current->info.getState();
-		oFile << current->info.getZipcode();
-		oFile << current->info.getPhoneNumber();
-		oFile << current->info.getRelationship();
-		oFile << "\n";
-		current = current->link;
-	}
+void addressBookType::reInit(string filename) {
+	//ofstream outFile(filename);
+	//nodeType<extPersonType>* current = this->first;
+	//while (current != nullptr) {
+	//	outFile << current->info.getFirstName() << " " << current->info.getLastName() << endl;
+	//	outFile << current->info.getBirthMonth() << " " << current->info.getDay() << " " << current->info.getYear() << endl;
+	//	outFile << current->info.getAddress() << endl;
+	//	outFile << current->info.getCity() << endl;
+	//	outFile << current->info.getState() << endl;
+	//	outFile << current->info.getZipcode() << endl;
+	//	outFile << current->info.getPhoneNumber() << endl;
+	//	outFile << current->info.getRelationship() << endl;
+	//	current = current->link;
+	//}
+
+	//outFile.close();
 }
